@@ -1,11 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>дегроид</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Қалың қалай, бауыр? Жастар вайбы</title>
+<style>
+:root{--sky:#29b6e8;--sun:#ffc928;--ink:#1b1245;--pink:#ff5fa2;--w:#fff}
+*{box-sizing:border-box;margin:0}
+body{font-family:system-ui,"Segoe UI",Roboto,Arial,sans-serif;background:var(--sky);color:var(--ink);line-height:1.5}
+.wrap{max-width:1040px;margin:auto;padding:0 20px}
+:focus-visible{outline:4px solid var(--ink);outline-offset:3px}
+.hero{position:relative;overflow:hidden;padding:96px 0 104px}
+.sun{position:absolute;right:-140px;top:-90px;width:560px;height:560px;border-radius:50%;
+background:radial-gradient(circle,var(--sun) 0 27%,transparent 27.5%),repeating-conic-gradient(var(--sun) 0 4deg,transparent 4deg 12deg);animation:spin 70s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+h1{position:relative;font-size:clamp(46px,10vw,112px);line-height:.95;font-weight:900;letter-spacing:-.03em;max-width:9ch}
+.hero p{position:relative;max-width:30ch;font-size:1.3rem;font-weight:700;margin:26px 0 34px}
+.btn{font:inherit;font-weight:800;font-size:1.05rem;border:3px solid var(--ink);background:var(--pink);color:var(--ink);padding:14px 24px;border-radius:999px;box-shadow:4px 4px 0 var(--ink);cursor:pointer;text-decoration:none;display:inline-block;margin:0 10px 10px 0}
+.btn:active{transform:translate(4px,4px);box-shadow:none}
+.btn.alt{background:var(--w)}
+.band{background:var(--sun);border-block:3px solid var(--ink);overflow:hidden;white-space:nowrap;padding:12px 0;font-weight:900;font-size:1.5rem}
+.band div{display:inline-block;animation:run 30s linear infinite}
+@keyframes run{to{transform:translateX(-50%)}}
+section{padding:76px 0}
+h2{font-size:clamp(32px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+.sub{font-weight:700;margin:12px 0 34px;font-size:1.15rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.card{background:var(--w);border:3px solid var(--ink);border-radius:20px;padding:22px;box-shadow:6px 6px 0 var(--ink)}
+.card b{display:block;font-size:1.7rem;font-weight:900;margin-bottom:6px}
+.card i{display:block;margin-top:10px;font-style:normal;font-weight:700;color:#4a3f8c}
+.card.g{background:var(--sun)}.card.p{background:var(--pink)}
+.card.g i,.card.p i{color:var(--ink)}
+.dark{background:var(--ink);color:#fff}
+.panel{background:var(--sun);color:var(--ink);border:3px solid #fff;border-radius:28px;padding:34px;box-shadow:8px 8px 0 var(--pink)}
+#fan{font-size:clamp(22px,4vw,36px);font-weight:900;line-height:1.25;min-height:5.2em;margin-bottom:22px}
+.bar{height:30px;border:3px solid var(--ink);border-radius:999px;background:var(--w);overflow:hidden;margin:22px 0 16px}
+.bar i{display:block;height:100%;width:0;background:var(--pink);transition:width .9s cubic-bezier(.2,.9,.3,1)}
+#pct{font-size:clamp(48px,12vw,96px);font-weight:900;line-height:1}
+#vtxt{font-size:1.3rem;font-weight:800;min-height:3em;max-width:42ch}
+footer{background:var(--ink);color:#fff;padding:40px 0;font-weight:700;border-top:3px solid var(--sun)}
+@media (prefers-reduced-motion:reduce){.sun,.band div{animation:none}.bar i{transition:none}}
+</style>
 </head>
 <body>
-    <p>дегроид</p>
+<header class="hero">
+  <div class="sun" aria-hidden="true"></div>
+  <div class="wrap">
+    <h1>Қалың қалай, бауыр?</h1>
+    <p>Мұнда зерігу жоқ: тек вайб, қиял және қазақша сленг. Жүр, кеттік!</p>
+    <a class="btn" href="#vibe">Вайбқа қосыл</a>
+    <a class="btn alt" href="#fantasy">Қиялға сүңгі</a>
+  </div>
+</header>
+
+<div class="band" aria-hidden="true"><div id="band">кайф ✦ вайб ✦ чилл ✦ флекс ✦ қатырды ✦ жарылдырды ✦ бомба ✦ кринж ✦ бауырым ✦ ұштық ✦ </div></div>
+
+<section id="slang">
+  <div class="wrap">
+    <h2>Сленг сөздігі</h2>
+    <p class="sub">Көшеде не айтылса, сол осында.</p>
+    <div class="grid">
+      <div class="card"><b>Қатырды</b>Керемет істеді дегенді білдіреді.<i>«Бүгінгі концерт қатырды!»</i></div>
+      <div class="card"><b>Вайб</b>Көңіл-күй мен жалпы атмосфера.<i>«Мына жердің вайбы бөлек.»</i></div>
+      <div class="card"><b>Кринж</b>Ыңғайсыз, ұялтатын сәт.<i>«Сол видеоны көріп, кринж болдым.»</i></div>
+      <div class="card"><b>Флекс</b>Мақтанып көрсету.<i>«Жаңа кроссовкамды флекстеп жүрмін.»</i></div>
+      <div class="card"><b>Чилл</b>Асықпай, босаңсып демалу.<i>«Бүгін ештеңе істемей, чиллдеп жатырмын.»</i></div>
+      <div class="card"><b>Жарылдырды</b>Тамаша нәтиже көрсетті.<i>«Бауырым емтиханды жарылдырды!»</i></div>
+    </div>
+  </div>
+</section>
+
+<section id="posters">
+  <div class="wrap">
+    <h2>Қиял постерлері</h2>
+    <p class="sub">Болашақта осылай болса ше?</p>
+    <div class="grid">
+      <div class="card g"><b>Тұлпар-дрон</b>Көктемде жайлауға ұшып барасың, ал ол жолда өзі зарядталады.</div>
+      <div class="card p"><b>Астана 2077</b>Бәйтерек түнде неонмен жарқырап, бүкіл қала билеп жатыр.</div>
+      <div class="card"><b>Домбыра-синтвейв</b>Ата-баба күйі мен қатты бит қосылса, клуб жарылады!</div>
+    </div>
+  </div>
+</section>
+
+<section id="fantasy" class="dark">
+  <div class="wrap">
+    <h2>Қиял генераторы</h2>
+    <p class="sub">Бір басып қалсаң, жаңа әлем ашылады.</p>
+    <div class="panel">
+      <p id="fan" aria-live="polite">Батырманы бас, қиял өзі келеді.</p>
+      <button class="btn" id="fanBtn" type="button">Қиялды қос</button>
+    </div>
+  </div>
+</section>
+
+<section id="vibe">
+  <div class="wrap">
+    <h2>Вайб-метр</h2>
+    <p class="sub">Бүгінгі көңіл-күйің неше пайыз?</p>
+    <button class="btn" id="vibeBtn" type="button">Тексер</button>
+    <div id="pct" aria-live="polite">0%</div>
+    <div class="bar"><i id="fill"></i></div>
+    <p id="vtxt" aria-live="polite">Батырманы бас, вайбыңды көрейік.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Жастарға арналған. Дос-бауырыңа жібер, лайк басып кет!</div>
+</footer>
+
+<script>
+const $=id=>document.getElementById(id),pick=a=>a[Math.floor(Math.random()*a.length)];
+const band=$('band');band.innerHTML+=band.innerHTML;
+const who=["Алматылық скейтер","Астанадағы робот-бозбала","Домбыра ұстаған хакер","Көк бөрі-диджей","Қыз Жібектің киборг-ұрпағы","Ғарышкер ағайың"];
+const where=["неон жарқыраған Көк-төбеде","2077 жылғы Байқоңырда","ұшатын шатырдың үстінде","Балқаш түбіндегі клубта","Шарын шатқалындағы телепортта","бұлттағы кофехананың ішінде"];
+const what=["тұлпарды электро-скутерге ауыстырды","бір түнде бүкіл әлемге хит шығарды","аспанға синтезатор ойнап ұшты","дронмен бешбармақ жеткізіп жүр","басқа галактикамен өлеңмен жарысты","бәріне вайб таратып жатыр"];
+$('fanBtn').onclick=()=>{$('fan').textContent=pick(who)+' '+pick(where)+' '+pick(what)+'.'};
+$('vibeBtn').onclick=()=>{
+  const n=Math.floor(Math.random()*101);
+  $('pct').textContent=n+'%';$('fill').style.width=n+'%';
+  $('vtxt').textContent=n<34?'Бүгін сәл төмен. Шай ішіп, музыка қос, бәрі орнына келеді.':
+    n<67?'Орташа вайб. Достарыңа жаз, көңіл-күй көтеріледі.':
+    n<90?'Жарайсың! Бүгін сенде қатырып тұрған энергия бар.':
+    'Бомба! Сен бүгін бүкіл қаланы жарылдырасың!';
+};
+</script>
 </body>
 </html>
