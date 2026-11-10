@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marvel комикстері: қағаздан экранға дейін</title>
+<style>
+:root{--red:#e62429;--blue:#1d4ed8;--yel:#ffe600;--k:#000;--w:#fff}
+*{box-sizing:border-box;margin:0}
+body{font-family:system-ui,"Segoe UI",Roboto,Arial,sans-serif;color:var(--k);line-height:1.5;
+background:radial-gradient(circle,rgba(29,78,216,.18) 2px,transparent 2.5px) 0 0/14px 14px,var(--w)}
+.wrap{max-width:1040px;margin:auto;padding:0 20px}
+:focus-visible{outline:4px solid var(--blue);outline-offset:3px}
+.hero{padding:56px 0}
+.pg{display:grid;grid-template-columns:1.25fr 1fr;gap:18px}
+.pn{border:5px solid var(--k);box-shadow:8px 8px 0 var(--k);padding:30px;position:relative;overflow:hidden}
+.pn.t{background:var(--yel)}
+.pn.r{background:var(--red);display:grid;place-items:center;min-height:320px}
+.pn.r::before{content:"";position:absolute;inset:0;background:radial-gradient(circle,rgba(0,0,0,.28) 3px,transparent 3.5px) 0 0/16px 16px}
+h1{font-size:clamp(34px,6.4vw,70px);line-height:1;font-weight:900;letter-spacing:-.03em}
+.pn p{font-size:1.2rem;font-weight:700;margin:20px 0 26px;max-width:34ch}
+.burst,.burst span{clip-path:polygon(100% 50%,77.7% 61.5%,85.4% 85.4%,61.5% 77.7%,50% 100%,38.5% 77.7%,14.6% 85.4%,22.3% 61.5%,0 50%,22.3% 38.5%,14.6% 14.6%,38.5% 22.3%,50% 0,61.5% 22.3%,85.4% 14.6%,77.7% 38.5%)}
+.burst{position:relative;width:min(300px,80%);aspect-ratio:1;background:var(--k);transform:rotate(-8deg)}
+.burst span{position:absolute;inset:4%;background:var(--yel);display:grid;place-items:center;font-size:clamp(30px,5.5vw,52px);font-weight:900;color:var(--red);-webkit-text-stroke:2px var(--k)}
+.btn{font:inherit;font-weight:900;font-size:1.05rem;border:4px solid var(--k);background:var(--red);color:var(--w);padding:12px 22px;box-shadow:5px 5px 0 var(--k);cursor:pointer;text-decoration:none;display:inline-block;margin:0 10px 10px 0}
+.btn.w{background:var(--w);color:var(--k)}
+.btn:active{transform:translate(5px,5px);box-shadow:none}
+.btn:disabled{opacity:.45;cursor:default}
+section{padding:64px 0}
+h2{display:inline-block;background:var(--k);color:var(--yel);font-size:clamp(28px,5vw,46px);font-weight:900;padding:6px 18px;transform:skew(-6deg)}
+.sub{font-weight:700;margin:16px 0 34px;font-size:1.1rem}
+.tl{border-left:6px solid var(--k);padding-left:26px;margin-left:10px}
+.ev{margin-bottom:22px;position:relative}
+.ev::before{content:"";position:absolute;left:-39px;top:12px;width:20px;height:20px;background:var(--red);border:4px solid var(--k);border-radius:50%}
+.yr{display:inline-block;background:var(--blue);color:var(--w);font-weight:900;font-size:1.3rem;padding:2px 12px;border:3px solid var(--k)}
+.ev div{background:var(--w);border:4px solid var(--k);box-shadow:5px 5px 0 var(--k);padding:14px 18px;margin-top:-3px;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px}
+.card{border:5px solid var(--k);box-shadow:7px 7px 0 var(--k);padding:22px;background:var(--w)}
+.card:nth-child(3n+1){background:var(--yel)}.card:nth-child(3n+2){background:#bcd0ff}
+.card b{display:block;font-size:1.9rem;font-weight:900;line-height:1.1}
+.card em{display:block;font-style:normal;font-weight:800;margin:4px 0 12px}
+.card small{display:inline-block;background:var(--k);color:var(--w);font-weight:700;padding:3px 10px;margin-bottom:12px}
+.quiz{background:var(--red);border:5px solid var(--k);box-shadow:8px 8px 0 var(--k);padding:30px;color:var(--w)}
+#q{font-size:clamp(20px,3.4vw,30px);font-weight:900;line-height:1.25;min-height:3.8em}
+#fb{font-weight:800;font-size:1.1rem;min-height:3.6em;margin:6px 0 14px;background:var(--k);padding:10px 14px}
+#fb:empty{visibility:hidden}
+footer{background:var(--k);color:var(--w);padding:36px 0;font-weight:600;font-size:.95rem}
+@media(max-width:760px){.pg{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap pg">
+    <div class="pn t">
+      <h1>Marvel комикстері: қағаз беттен үлкен экранға дейін</h1>
+      <p>Супер-қаһармандар қалай дүниеге келді, оларды кім жасады және неге бүкіл әлем жақсы көреді? Жүр, парақтайық.</p>
+      <a class="btn" href="#history">Тарихты оқы</a>
+      <a class="btn w" href="#heroes">Кейіпкерлерді көр</a>
+    </div>
+    <div class="pn r" aria-hidden="true"><div class="burst"><span>ТАРС!</span></div></div>
+  </div>
+</header>
+
+<section id="history">
+  <div class="wrap">
+    <h2>Комикс тарихы</h2>
+    <p class="sub">Шағын баспадан бүкіл ғаламға дейінгі жол.</p>
+    <div class="tl">
+      <div class="ev"><span class="yr">1939</span><div>Баспагер Мартин Гудман «Marvel Comics #1» нөмірін шығарады. Баспа ол кезде Timely Comics деп аталған. Бұл нөмірде Human Torch пен Нэмор алғаш рет көрінеді.</div></div>
+      <div class="ev"><span class="yr">1941</span><div>«Captain America Comics #1» шығады. Кейіпкерді Джо Саймон мен Джек Кирби жасады.</div></div>
+      <div class="ev"><span class="yr">1961</span><div>«Fantastic Four #1» шығады. Стэн Ли мен Джек Кирби «Marvel дәуірін» бастайды: қаһармандар қарапайым адамдай уайымдайды, қателеседі, ұрысып қалады.</div></div>
+      <div class="ev"><span class="yr">1962–1963</span><div>Бір жылда Hulk, Thor және Spider-Man келеді. Келесі жылы Iron Man, Avengers және X-Men шығады. Ортақ әлем осылай құрыла бастады.</div></div>
+      <div class="ev"><span class="yr">1966</span><div>Black Panther «Fantastic Four #52» нөмірінде көрінеді. Ол негізгі америкалық комикстердегі алғашқы қара түсті супер-қаһарман саналады.</div></div>
+      <div class="ev"><span class="yr">2008</span><div>«Iron Man» фильмі шығып, Marvel Cinematic Universe басталады.</div></div>
+      <div class="ev"><span class="yr">2009</span><div>Disney компаниясы Marvel Entertainment-ті сатып алуға келіседі.</div></div>
+      <div class="ev"><span class="yr">2014</span><div>Ms. Marvel сериясында Камала Хан бас кейіпкер болады. Ол пәкістандық-американдық жасөспірім қыз.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="heroes">
+  <div class="wrap">
+    <h2>Кейіпкерлер</h2>
+    <p class="sub">Алты танымал қаһарман және олардың алғашқы көрінісі.</p>
+    <div class="grid">
+      <div class="card"><small>Amazing Fantasy #15, 1962</small><b>Spider-Man</b><em>Питер Паркер</em>Радиоактивті өрмекші шаққан мектеп оқушысы. Оның ұстанымы қарапайым: күш көп болса, жауапкершілік те көп.</div>
+      <div class="card"><small>Tales of Suspense #39, 1963</small><b>Iron Man</b><em>Тони Старк</em>Данышпан инженер әрі миллиардер. Өзі жасаған сауытты киіп, әлемді қорғайды.</div>
+      <div class="card"><small>Captain America Comics #1, 1941</small><b>Captain America</b><em>Стив Роджерс</em>Тәжірибе арқылы күшейтілген солдат. Қалқаны мен адалдығымен танымал.</div>
+      <div class="card"><small>Journey into Mystery #83, 1962</small><b>Thor</b><em>Асгард құдайы</em>Скандинав мифологиясынан шабыт алған қаһарман. Балғасы арқылы найзағайды басқарады.</div>
+      <div class="card"><small>The Incredible Hulk #1, 1962</small><b>Hulk</b><em>Брюс Баннер</em>Ғалым. Қатты ашуланғанда, алып жасыл күшке айналады.</div>
+      <div class="card"><small>Fantastic Four #52, 1966</small><b>Black Panther</b><em>Т’Чалла</em>Ваканда елінің королі. Технологиясы озық мемлекетті қорғайды.</div>
+    </div>
+  </div>
+</section>
+
+<section id="game">
+  <div class="wrap">
+    <h2>Шын ба, өтірік пе?</h2>
+    <p class="sub">Тарихты оқыдың ба? Енді тексеріп көр.</p>
+    <div class="quiz">
+      <p id="q" aria-live="polite"></p>
+      <p id="fb" aria-live="polite"></p>
+      <button class="btn w" id="yes" type="button">Шын</button>
+      <button class="btn w" id="no" type="button">Өтірік</button>
+      <button class="btn w" id="next" type="button" hidden>Келесі</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Бұл жанкүйерлер жасаған ресми емес сайт. Marvel және кейіпкерлердің атаулары өз иелерінің тауар белгілері болып табылады.</div>
+</footer>
+
+<script>
+const $=id=>document.getElementById(id);
+const Q=[
+["Spider-Man алғаш рет 1962 жылы шықты.",true,"Spider-Man «Amazing Fantasy #15» нөмірінде көрінді."],
+["Hulk бірінші рет «Fantastic Four #1» нөмірінде пайда болды.",false,"Hulk өз сериясы «The Incredible Hulk #1» арқылы 1962 жылы келді."],
+["Captain America 1961 жылы пайда болды.",false,"Ол 1941 жылы, «Captain America Comics #1» нөмірінде шықты."],
+["Disney Marvel Entertainment-ті сатып алуға 2009 жылы келісті.",true,"Келісім 2009 жылы жасалды."]
+];
+let i=0,s=0;
+function show(){
+  $('fb').textContent='';$('next').hidden=true;
+  if(i>=Q.length){
+    $('q').textContent='Нәтиже: '+s+' / '+Q.length+(s===Q.length?'. Сен нағыз жанкүйерсің!':'. Тарихты қайта парақтап көр.');
+    $('yes').hidden=$('no').hidden=true;$('next').hidden=false;$('next').textContent='Қайта ойна';return;
+  }
+  $('yes').hidden=$('no').hidden=false;$('yes').disabled=$('no').disabled=false;
+  $('q').textContent=(i+1)+'/'+Q.length+'. '+Q[i][0];
+}
+function ans(v){
+  const ok=v===Q[i][1];s+=ok;
+  $('fb').textContent=(ok?'Дұрыс! ':'Қателестің. ')+Q[i][2];
+  $('yes').disabled=$('no').disabled=true;$('next').hidden=false;$('next').textContent='Келесі';
+}
+$('yes').onclick=()=>ans(true);$('no').onclick=()=>ans(false);
+$('next').onclick=()=>{if(i>=Q.length){i=0;s=0}else i++;show()};
+show();
+</script>
+</body>
+</html>
