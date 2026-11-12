@@ -14,3 +14,9 @@
 
 ## 👥 Қатысушылар
 - Жоба авторлары мен әзірлеушілер тобы.
+
+# Жоба: 6-7-8-9-10
+
+## 👥 Қатысушылар тізімі (Contributors)
+- **Aubakirov Ismail** (ismailaubakirov5)
+- **tiakovernar-debug** (Ернар)
